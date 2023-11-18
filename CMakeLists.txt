@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.26)
+project(chip_8_compiler)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(chip_8_compiler main.cpp
+        src/compiler.cpp
+        src/compiler.hpp
+        src/decompiler.cpp
+        src/decompiler.hpp
+        src/file_handler.cpp
+        src/file_handler.hpp
+        src/parameters.cpp
+        src/parameters.hpp
+)
