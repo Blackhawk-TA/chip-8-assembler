@@ -1,0 +1,35 @@
+CLS        ; Clear display
+RET        ; Return from subroutine
+JP	 A     ; Jump to location nnn
+CALL A     ; Call subroutine at nnn
+SEM  A,B   ; Skip if Vx = nn
+SNEM A,B   ; Skip if Vx != nn
+SE   A,B   ; Skip if Vx == Vy
+LDM  A,B   ; Set Vx = nn
+ADDM A,B   ; Set Vx = Vx + nn
+LD   A,B   ; Set Vx = Vy
+OR   A,B   ; Set Vx = Vx OR Vy
+AND  A,B   ; Set Vx = Vx AND Vy
+XOR  A,B   ; Set Vx = Vx XOR Vy
+ADD  A,B   ; Set Vx = Vx + Vy
+SUB  A,B   ; Set Vx = Vx - Vy
+SHR  A     ; Set Vx = Vx >> 1
+SUBN A,B   ; Set Vx = Vy - Vx
+SHL  A     ; Set Vx = Vx << 1
+SNE  A,B   ; Skip if Vx != Vy
+STI  A     ; Set I = nnn
+JPA  A     ; Jump to location nnn + V0
+RND  A,B   ; Set Vx = random byte AND nn
+DRW  A,B,C ; Draw at Vx, Vy for n sprites
+SKP  A     ; Skip next instruction if key with value of Vx is pressed
+SKNP A     ; Skip next instruction if key with value of Vx is not pressed
+LDT  A     ; Set Vx = delay timer value
+LDK  A     ; Wait for key press, store value of key in Vx
+SDT  A     ; Set delay timer = Vx
+SST  A     ; Set sound time = Vx
+ADDI A     ; Set I = I + Vx
+STSI A     ; Set I = location of sprite for digit Vx
+STD  A     ; Store BCD representation of Vx in memory locations I, I+1, and I+2
+STA  A     ; Store registers V0 through Vx in memory starting at location I
+LDA  A     ; Read registers V0 through Vx from memory starting at location I
+
