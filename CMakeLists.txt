@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.26)
-project(chip_8_compiler)
+project(chip_8_assembler)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(chip_8_compiler main.cpp
+add_executable(chip_8_assembler main.cpp
         src/assembler.cpp
         src/assembler.hpp
         src/disassembler.cpp
